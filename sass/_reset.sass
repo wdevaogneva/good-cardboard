@@ -1,0 +1,31 @@
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	@include roboto
+	background-color: #ffffff
+
+.container
+	max-width: 970px
+
+ul
+	padding: 0
+
+input, button
+	&:focus
+		outline: none
+
+input:invalid
+	box-shadow: none
+
+
+.hidden-title
+	display: none
+
+a
+	color: $text-color-dark
+	&:hover
+		text-decoration: none
+		color: $active-color
+

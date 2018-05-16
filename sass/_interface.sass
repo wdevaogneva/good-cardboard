@@ -1,0 +1,139 @@
+.section
+	&-title
+		margin-bottom: 20px
+		@include roboto-b
+		font-size: 27px
+		text:
+			transform: uppercase
+			align: center
+		color: $text-color-dark
+		&::after
+			content: ''
+			display: block
+			height: 6px
+			margin-top: 12px
+			background: transparent url(../img/line.png) center no-repeat
+
+.button
+	padding: 12px 21px
+	@include roboto-m
+	font:
+		size: 14px
+		weight: 500
+	color: $text-color-light
+	background-color: $active-color
+	border: 1px $active-color solid
+	border-radius: 5px
+	&:hover
+		background-color: lighten($active-color, 5)
+		cursor: pointer
+	img
+		vertical-align: middle
+		width: 20px
+		height: 20px
+		padding-right: 3px
+	&_big
+		vertical-align: middle
+		margin-bottom: 5px
+		padding: 16px 22px
+	&_long
+		padding: 12px 29px
+	&-o
+		margin-right: 8px
+		padding: 12px 27px
+		color: rgba($text-color-dark, 0.5)
+		background-color: transparent
+		border: 1px rgba($text-color-dark, 0.5) solid
+		&:hover
+			color: $text-color-light
+			background-color: lighten($active-color, 5)
+			border: 1px $active-color solid
+	&-offer
+		display: block
+		margin: auto
+		padding: 16px 28px
+		font-size: 15px
+
+.slider-arrow
+	position: absolute
+	top: 0
+	z-index: 1
+	height: 100%
+	width: 22px
+	&:hover
+		cursor: pointer
+	
+	&__right
+		right: 0
+		&_prod
+			background: #fff url(../img/arrow-right.png) center no-repeat
+			border: 1px $active-color solid
+			&:hover
+				background: $active-color url(../img/arrow-right_active.png) center no-repeat
+		&_feedback
+			background: url(../img/arrow-right.png) center no-repeat
+				size: 20% 10%
+			&:hover
+				opacity: 0.5
+
+	&__left
+		left: 0
+		&_prod
+			background: #fff url(../img/arrow-left.png) center no-repeat
+			border: 1px $active-color solid
+			&:hover
+				background: $active-color url(../img/arrow-left_active.png) center no-repeat
+		&_feedback
+			background: url(../img/arrow-left.png) center no-repeat
+				size: 20% 10%
+			&:hover
+				opacity: 0.5
+
+.dark-bg
+	/*задаем позицию для использования затемнения*/
+	/*заставляем элемент стать "жестким"- своеобразной "формой для выпекания"*/
+	position: relative
+	z-index: 2
+	/* затемнение фонового изображения на главном экране*/
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -1
+		display: block
+		/*позиция относительно самой картинки от левого верхнего угла на 100% ширину и высоту*/
+		/*это как тесто, растекающееся внутри жесткой формы*/
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.7)
+
+
+.production-slider__bottom
+	.slick-slide
+		&__img
+			position: relative
+			z-index: 10
+			margin-right: 5px
+			margin-left: 5px		
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				z-index: 7
+				display: block
+				width: 100%
+				height: 100%
+				background-color: rgba(0, 0, 0, 0.6)
+			img
+				max-width: 100%	
+			&.slick-current
+				&::before
+					opacity: 0
+													
+										
+
+
+
+	

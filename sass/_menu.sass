@@ -1,0 +1,144 @@
+.navigation
+	.container
+		position: relative
+.menu
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1001
+	width: 100%
+	height: 45px
+	padding-top: 12px
+	@include roboto
+	font-size: 12px
+	text:
+		align: center
+		transform: uppercase
+	color: $text-color-light
+	background-color: $text-color-dark
+	
+	
+	
+	&-ul
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		list-style-type: none
+	&-link
+		padding:
+			top: 5px
+			bottom: 5px
+		text-decoration: none
+		color: $text-color-light
+		transition: all 0.2s
+		&:hover
+			margin-top: -10px
+			font-size: 16px
+			text-decoration: none
+			color: $active-color
+	&-dottedline
+		border-left: 2px dotted rgba($text-color-light, 0.2)
+		width: 1px
+		height: 20px
+	&_min
+		left: 0
+		display: none
+		width: 100%
+		height: 100%
+		background-color: rgba($text-color-dark, 0.9)
+		transition: all 0.5s
+		.container
+			height: 100%
+			padding: 0
+		&-ul
+			justify-content: center
+			height: 100%
+			padding:
+				top: 80px
+				bottom: 50px
+		&-li
+			display: block
+			width: 100%
+			text-align: center
+			list-style-type: none
+		&-link
+			padding: 0
+			letter-spacing: 1px
+			font-size: 14px
+			border: none
+			transition: all 0.2s
+			&:hover
+				text-decoration: none
+				font-size: 14px
+				color: $text-color-light
+
+
+	
+
+
+	/*описание кнопки меню  */
+	&-mobile
+		display: none
+		&__text
+			display: none
+			margin-top: 11px
+		&-link
+			position: relative
+			z-index: 1002
+			display: inline-block
+			width: 100%
+			height: 50px
+			margin:
+				left: -7px
+				top: 4px
+			@include roboto-m
+			text-align: center
+			letter-spacing: 1px
+			color: rgba($text-color-dark, 0.5)
+			background-color: $text-color-light
+			border: 1px solid rgba($text-color-dark, 0.5)
+				radius: 3px
+			&:hover
+					box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4)
+			&_active
+				.menu-mobile__line
+					background-color: transparent
+					&:before
+						transform: rotate(135deg)
+						margin-top: 0
+					&:after
+						transform: rotate(-135deg)
+						margin-top: 0
+		&__line, &__line:before, &__line:after
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			height: 3px
+			width: 22px
+			margin:
+				top: -2px
+				left: -11px
+			background-color: $text-color-dark
+		&__line
+			&:before
+				content: ''
+				margin:
+					top: -8px
+					left: -11px
+				transition: all 0.2s
+			&:after
+				content: ''
+				margin:
+					top: 5px
+					left: -11px
+				transition: all 0.2s
+
+
+
+
+
+
+
+
+		

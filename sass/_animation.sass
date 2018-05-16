@@ -1,0 +1,42 @@
+@keyframes rotateLogo
+	from
+		opacity: 0
+		transform: rotateY(0deg)
+	1%
+		opacity: 1
+	50%
+		transform: rotateY(180deg)
+	to
+		transform: rotateY(0deg)
+
+
+@keyframes moveUp
+	from
+		opacity: 0
+		margin-bottom: -350px
+		transform: rotate(-90deg)
+	50%
+		opacity: 1
+		margin-bottom: 0px
+		transform: rotate(-90deg)
+	to
+		transform: rotate(0deg)
+
+.animate-main
+	transform: rotate(-90deg)
+	animation:
+		name: moveUp
+		delay: 0.4s
+		duration: 1s
+		fill-mode: forwards
+
+.main
+	&-img
+		&::after
+			animation:
+				name: rotateLogo
+				delay: 1.4s
+				duration: 0.4s
+				iteration-count: 2
+				timing-function: ease-in-out
+				fill-mode: forwards

@@ -1,0 +1,77 @@
+.products
+	padding:
+		top: 52px
+		bottom: 45px
+	&-block
+		margin:
+			right: -4px
+			bottom: 25px
+		text-align: center
+		overflow: hidden
+		&__img
+			height: 281px
+			&_clip
+				margin-top: 40px
+
+		&__title
+			margin-top: 12px
+			@include roboto-m
+			font-size: 20px
+		&__buttons
+			margin-top: 26px
+	&-description
+		position: fixed
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 700px
+		padding-bottom: 20px
+		background-color: $text-color-light
+		text-align: center
+		border-radius: 5px
+		&__img
+			float: left
+			min-height: 180px
+			img
+				width: 200px
+		&__body
+			text-align: left
+			padding: 0 20px
+			@include roboto
+			font-size: 14px
+			line-height: 16px				
+		&__title
+			width: 100%
+			padding: 9px 25px
+			@include roboto-b
+			font-size: 20px
+			line-height: 30px
+			color: $text-color-light
+			background-color: $active-color
+			text-transform: uppercase
+		&-close
+			position: absolute
+			right: -20px
+			top: -35px
+			@include roboto-l
+			font-size: 35px
+			cursor: pointer
+			color: $bg-color-lignt
+
+.clear
+	clear: both
+	
+
+
+
+
+
+
+
+				
+			
+				
+
+
+
+

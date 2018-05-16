@@ -1,0 +1,42 @@
+.production
+	padding:
+		top: 87px
+		bottom: 29px
+	&-slider
+		&__top
+			max-height: 356px
+			margin-bottom: 13px
+			overflow-y: hidden
+		&__bottom
+			max-height: 77px
+			padding:
+				left: 25px
+				right: 25px
+			overflow-y: hidden
+			img
+				margin-right: 6px
+				outline: none
+	&-text
+		max-width: 379px
+		&__title
+			margin:
+				left: -30px
+				top: 20px
+			padding: 9px 25px
+			@include roboto
+			font-size: 28px
+			color: $text-color-light
+			background-color: $active-color
+			border: 1px $active-color solid
+		&__descr
+			width: 100%
+			margin:
+				left: -5px
+				top: 25px
+			p
+				text-align: justify
+				@include roboto-l
+				line-height: 22.5px
+				
+
+
